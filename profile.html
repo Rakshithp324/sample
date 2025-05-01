@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Provider Profile - HomeFix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f2f6fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .profile-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .profile-card img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #007bff44;
+      margin-bottom: 1rem;
+    }
+
+    .profile-card h2 {
+      font-size: 1.6rem;
+      color: #007bff;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-card p {
+      font-size: 1rem;
+      margin: 0.3rem 0;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #007bff;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #0056b3;
+    }
+
+    /* Reviews Section */
+    .reviews {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .reviews h3 {
+      font-size: 1.6rem;
+      color: #007bff;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .review-card {
+      background-color: #f9fbfd;
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #007bff;
+      transition: transform 0.2s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .reviewer .icon {
+      margin-right: 0.6rem;
+      font-size: 1.4rem;
+    }
+
+    .review-card p {
+      font-style: italic;
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+
+    .stars {
+      color: #ffc107;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      .profile-card, .reviews {
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HomeFix</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contactus.html">contact us</a>
+      <a href="admin.html">My Profile</a>
+     
+    </nav>
+  </header>
+
+  <main>
+    <div class="profile-card">
+      <img src="/sample/src/profile.avif" alt="John Doe">
+      <h2>John Doe</h2>
+      <p>Expert in residential cleaning with 5+ years experience.</p>
+      <p>⭐ 4.8 (112 reviews)</p>
+      <a href="book.html" class="button">Book Now</a>
+    </div>
+
+    <div class="reviews">
+      <h3>Customer Reviews</h3>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="reviewer">
+            <span class="icon">👩</span>
+            <strong>Jane</strong>
+          </div>
+          <p>"Great service! My house has never been cleaner."</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <div class="review-card">
+          <div class="reviewer">
+            <span class="icon">👨</span>
+            <strong>Mark</strong>
+          </div>
+          <p>"Punctual and thorough. Highly recommended!"</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <div class="review-card">
+          <div class="reviewer">
+            <span class="icon">👩‍💼</span>
+            <strong>Neha</strong>
+          </div>
+          <p>"Very polite and professional. Will book again."</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 HomeFix. All rights reserved.
+  </footer>
+
+</body>
+</html>

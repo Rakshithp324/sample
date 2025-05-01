@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile - HomeFix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #e4f0ff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .profile-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .profile-box img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #007bff55;
+      margin-bottom: 1rem;
+    }
+
+    .profile-box h2 {
+      font-size: 1.5rem;
+      color: #007bff;
+    }
+
+    .profile-box p {
+      margin: 0.3rem 0;
+      color: #555;
+    }
+
+    .edit-button {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .edit-button:hover {
+      background-color: #0056b3;
+    }
+
+    .history-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .history-box h3 {
+      font-size: 1.4rem;
+      color: #007bff;
+      margin-bottom: 1.2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 0.8rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #f7f9fb;
+      color: #333;
+      font-weight: 600;
+    }
+
+    td {
+      color: #555;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      .profile-box, .history-box {
+        padding: 1.5rem 1rem;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      td {
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1rem;
+        font-weight: 600;
+        color: #007bff;
+      }
+
+      thead {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HomeFix</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contactus.html">contact us</a>
+      <a href="admin.html" class="active">My Profile</a>
+     
+    </nav>
+  </header>
+
+  <main>
+    <div class="profile-box">
+      <img src="/sample/src/profile.avif" alt="Customer">
+      <h2>Jane Doe</h2>
+      <p>Email: janedoe@email.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <a href="#" class="edit-button">Edit Profile</a>
+    </div>
+
+    <div class="history-box">
+      <h3>Booking History</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Professional</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Service">Home Cleaning</td>
+            <td data-label="Professional">John Smith</td>
+            <td data-label="Date">2025-05-03</td>
+            <td data-label="Status">Completed</td>
+          </tr>
+          <tr>
+            <td data-label="Service">Plumbing</td>
+            <td data-label="Professional">Mike Johnson</td>
+            <td data-label="Date">2025-04-25</td>
+            <td data-label="Status">Completed</td>
+          </tr>
+          <tr>
+            <td data-label="Service">Electrician</td>
+            <td data-label="Professional">Emma Davis</td>
+            <td data-label="Date">2025-04-18</td>
+            <td data-label="Status">Cancelled</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 HomeFix. All rights reserved.
+  </footer>
+
+</body>
+</html>

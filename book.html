@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment - HomeFix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #e4f0ff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+      padding: 3rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .booking-container {
+      width: 100%;
+      max-width: 500px;
+      background-color: #ffffff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking-container h2 {
+      text-align: center;
+      color: #007bff;
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    select,
+    input[type="date"],
+    input[type="time"] {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s;
+    }
+
+    select:focus,
+    input:focus {
+      outline: none;
+      border-color: #007bff;
+      background-color: #fff;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .button-container a {
+      text-decoration: none;
+      background-color: #007bff;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-container a:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      .booking-container {
+        padding: 2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HomeFix</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contactus.html">contact us</a>
+      <a href="admin.html" >My Profile</a>
+     
+    </nav>
+  </header>
+
+  <main>
+    <div class="booking-container">
+      <h2>Book an Appointment</h2>
+      <form onsubmit="event.preventDefault(); window.location.href='success.html';">
+        <div>
+          <label for="service">Select Service:</label>
+          <select id="service" name="service" required>
+            <option value="">-- Choose a Service --</option>
+            <option value="cleaning">Home Cleaning</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical Repairs</option>
+            <option value="appliance">Appliance Repair</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="professional">Select Professional:</label>
+          <select id="professional" name="professional" required>
+            <option value="">-- Choose a Professional --</option>
+            <option value="john">John Smith</option>
+            <option value="emma">Emma Davis</option>
+            <option value="mike">Mike Johnson</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <div>
+          <label for="time">Select Time:</label>
+          <input type="time" id="time" name="time" required />
+        </div>
+
+        <div class="button-container">
+          <a href="payment.html">Make Payment</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 HomeFix. All rights reserved.
+  </footer>
+
+</body>
+</html>

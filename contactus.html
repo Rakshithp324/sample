@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - HomeFix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #e4f0ff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .contact-section {
+      background-color: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 2rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .contact-info p strong {
+      color: #007bff;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form label {
+      font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #007bff;
+      background-color: #fff;
+    }
+
+    .contact-form button {
+      padding: 0.8rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HomeFix</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contactus.html" class="active">contact us</a>
+        <a href="admin.html" >My Profile</a>
+       
+      </nav>
+  </header>
+
+  <main>
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <p><strong>Email:</strong> support@homefix.com</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Address:</strong><br/>
+            123 Service Street,<br/>
+            New Delhi, India
+          </p>
+          <p><strong>Hours:</strong><br/>
+            Mon - Sat: 9 AM – 6 PM<br/>
+            Sunday: Closed
+          </p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.')">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 HomeFix. All rights reserved.
+  </footer>
+
+</body>
+</html>
